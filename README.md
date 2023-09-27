@@ -1,1 +1,1 @@
-# 3_course_project
+# 3_course_projects
