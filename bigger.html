@@ -6,6 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="https://www.google.com/advanced_search" method="GET">
+        <label for="all-words">Все слова:</label>
+        <input type="text" id="all-words" name="allwords" required><br>
+
+        <label for="exact-phrase">Фраза:</label>
+        <input type="text" id="exact-phrase" name="exactphrase"><br>
+
+        <label for="any-words">Любое из слов:</label>
+        <input type="text" id="any-words" name="anywords"><br>
+
+        <label for="none-words">Ни одно из слов:</label>
+        <input type="text" id="none-words" name="notwords"><br>
+
+        <label for="site">Сайт или домен:</label>
+        <input type="text" id="site" name="site"><br>
+
+        <label for="file-type">Тип файла:</label>
+        <select id="file-type" name="filetype">
+            <option value="">Любой тип</option>
+            <option value="pdf">PDF</option>
+            <option value="doc">Документы</option>
+            <option value="xls">Таблицы</option>
+        </select><br>
+
+        <button type="submit">Искать</button>
+    </form>
+    <div>
+        <a href="picture.html"><div><img src="foto_icon.jpeg" height=50px width=50px> <p>Ищите картинку</p></div></a>
+        <a href="index.html"><div><img src="index_icon.jpeg" height=50px width=50px> <p>На главную</p></div></a>
+    </div> 
 </body>
 </html>
