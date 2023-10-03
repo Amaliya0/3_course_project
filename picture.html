@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="easy.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+
 </head>
 <body>
-    <form action="https://www.google.com/imghp" method="GET">
-        <input type="text" name="q" placeholder="Поиск картинок в Google" required>
-        <button type="submit">Поиск картинок</button>
-    </form> 
+    <div class="form-group">
+    <form action="https://www.google.com/searchbyimage/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="encoded_image" accept="image/*" required>
+        <button type="submit">Искать изображение</button>
+    </form>
     <div>
-        <a href="index.html"><div><img src="index_icon.jpeg" height=50px width=50px> <p>На главную</p></div></a>
-        <a href="bigger.html"><div><img src="lisy_icon.jpeg" height=50px width=50px> <p>Расширенный поиск</p></div></a>
-    </div> 
+        <a href="index.html">
+            <div>
+                <img src="index_icon.jpeg" height="50px" width="50px">
+                <p>На главную</p>
+            </div>
+        </a>
+        <a href="bigger.html">
+            <div>
+                <img src="lisy_icon.jpeg" height="50px" width="50px">
+                <p>Расширенный поиск</p>
+            </div>
+        </a>
+    </div>    
+    </div>
 </body>
 </html>

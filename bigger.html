@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="easy.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+
+
 </head>
 <body>
+    <div class="form-group">
     <form action="https://www.google.com/advanced_search" method="GET">
         <label for="all-words">Все слова:</label>
         <input type="text" id="all-words" name="allwords" required><br>
@@ -28,13 +33,25 @@
             <option value="pdf">PDF</option>
             <option value="doc">Документы</option>
             <option value="xls">Таблицы</option>
-        </select><br>
-
+        </select>
+        <br>
+        <br>
         <button type="submit">Искать</button>
     </form>
     <div>
-        <a href="picture.html"><div><img src="foto_icon.jpeg" height=50px width=50px> <p>Ищите картинку</p></div></a>
-        <a href="index.html"><div><img src="index_icon.jpeg" height=50px width=50px> <p>На главную</p></div></a>
+        <a href="picture.html">
+            <div>
+                <img src="foto_icon.jpeg" height=50px width=50px> 
+                <p>Ищите картинку</p>
+            </div>
+        </a>
+        <a href="index.html">
+            <div>
+                <img src="index_icon.jpeg" height=50px width=50px> 
+                <p>На главную</p>
+            </div>
+        </a>
     </div> 
+    </div>
 </body>
 </html>
