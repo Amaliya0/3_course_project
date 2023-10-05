@@ -6,52 +6,124 @@
     <title>Document</title>
     <link rel="stylesheet" href="easy.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <script>
+        document.getElementById("google-advanced-search-form").addEventListener("submit", function(event) {
+            event.preventDefault();
 
+            var allWords = document.getElementById("all-words").value;
+            var exactPhrase = document.getElementById("exact-phrase").value;
+            var anyWords = document.getElementById("any-words").value;
+            var notWords = document.getElementById("none-words").value;
+            var site = document.getElementById("site").value;
+            var fileType = document.getElementById("file-type").value;
+
+            var url = "https://www.google.com/search?q=";
+
+            if (allWords) {
+                url += encodeURIComponent(allWords) + " ";
+            }
+
+            if (exactPhrase) {
+                url += "\"" + encodeURIComponent(exactPhrase) + "\" ";
+            }
+
+            if (anyWords) {
+                url += encodeURIComponent(anyWords) + " OR ";
+            }
+
+            if (notWords) {
+                url += "-" + encodeURIComponent(notWords) + " ";
+            }
+
+            if (site) {
+                url += "site:" + encodeURIComponent(site) + " ";
+            }
+
+            if (fileType) {
+                url += "filetype:" + encodeURIComponent(fileType);
+            }
+
+            window.location.href = url;
+        });
+    </script>
 
 </head>
 <body>
-    <div class="form-group">
-    <form action="https://www.google.com/advanced_search" method="GET">
-        <label for="all-words">Все слова:</label>
-        <input type="text" id="all-words" name="allwords" required><br>
-
-        <label for="exact-phrase">Фраза:</label>
-        <input type="text" id="exact-phrase" name="exactphrase"><br>
-
-        <label for="any-words">Любое из слов:</label>
-        <input type="text" id="any-words" name="anywords"><br>
-
-        <label for="none-words">Ни одно из слов:</label>
-        <input type="text" id="none-words" name="notwords"><br>
-
-        <label for="site">Сайт или домен:</label>
-        <input type="text" id="site" name="site"><br>
-
-        <label for="file-type">Тип файла:</label>
-        <select id="file-type" name="filetype">
-            <option value="">Любой тип</option>
-            <option value="pdf">PDF</option>
-            <option value="doc">Документы</option>
-            <option value="xls">Таблицы</option>
-        </select>
-        <br>
-        <br>
-        <button type="submit">Искать</button>
-    </form>
-    <div>
+    <div class="search-bar">
         <a href="picture.html">
             <div>
                 <img src="foto_icon.jpeg" height=50px width=50px> 
-                <p>Ищите картинку</p>
             </div>
         </a>
         <a href="index.html">
             <div>
-                <img src="index_icon.jpeg" height=50px width=50px> 
-                <p>На главную</p>
+                <img src="index_icon.jpeg" height=42px width=42px> 
             </div>
         </a>
-    </div> 
     </div>
+    <div>
+        <h1>Google</h1>
+    </div>
+    <div class="search-bar">
+    <form action="https://www.google.com/advanced_search" method="GET">
+        <div class="form-row">
+            <div class="label">
+                <label for="all-words">Все слова:</label>
+            </div>
+            <div>
+                <input type="text" id="all-words" name="allwords" required><br>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="label">
+                <label for="exact-phrase">Фраза:</label>
+            </div>
+            <div>
+                <input type="text" id="exact-phrase" name="exactphrase"><br>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="label">
+                <label for="any-words">Любое из слов:</label>
+            </div>
+            <div>
+                <input type="text" id="any-words" name="anywords"><br>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="label">
+                <label for="none-words">Ни одно из слов:</label>
+            </div>
+            <div>
+                <input type="text" id="none-words" name="notwords"><br>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="label">
+                <label for="site">Сайт или домен:</label>
+            </div>
+            <div>
+                <input type="text" id="site" name="site"><br>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="label">
+                <label for="file-type">Тип файла:</label>
+            </div>
+            <div>
+                <select id="file-type" name="filetype">
+                    <option value="">Любой тип</option>
+                    <option value="pdf">PDF</option>
+                    <option value="doc">Документы</option>
+                    <option value="xls">Таблицы</option>
+                </select>
+            </div>
+        </div>
+        <button class="search-button" type="submit">Искать</button>
+    </form> 
+    </div>
+
+
+
 </body>
 </html>

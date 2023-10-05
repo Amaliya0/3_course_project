@@ -9,25 +9,27 @@
 
 </head>
 <body>
-    <div class="form-group">
-    <form action="https://www.google.com/searchbyimage/upload" method="POST" enctype="multipart/form-data">
-        <input type="file" name="encoded_image" accept="image/*" required>
-        <button type="submit">Искать изображение</button>
-    </form>
-    <div>
+    <div class="search-bar">
         <a href="index.html">
             <div>
-                <img src="index_icon.jpeg" height="50px" width="50px">
-                <p>На главную</p>
+                <img src="index_icon.jpeg" height="43px" width="43px">
             </div>
         </a>
+    
         <a href="bigger.html">
             <div>
                 <img src="lisy_icon.jpeg" height="50px" width="50px">
-                <p>Расширенный поиск</p>
             </div>
         </a>
-    </div>    
+    </div> 
+    <div>
+        <h1>Google</h1>
+    </div>
+    <div class="search-bar">
+    <form action="https://www.google.com/searchbyimage/upload" method="POST" enctype="multipart/form-data">
+        <input class="search-input" type="file" name="encoded_image" accept="image/*" required>
+        <button class="search-button" type="submit">Искать изображение</button>
+    </form>   
     </div>
 </body>
 </html>
