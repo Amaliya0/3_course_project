@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <div class="search-bar">
+    <div class="search-bar-links">
         <a href="index.html">
             <div>
                 <img src="index_icon.jpeg" height="43px" width="43px">
@@ -26,8 +26,8 @@
         <h1>Google</h1>
     </div>
     <div class="search-bar">
-    <form action="https://www.google.com/searchbyimage/upload" method="POST" enctype="multipart/form-data">
-        <input class="search-input" type="file" name="encoded_image" accept="image/*" required>
+    <form action="https://www.google.com/images" method="get">
+        <input class="search-input" type="text" name="q" placeholder="Поиск в Google" required>
         <button class="search-button" type="submit">Искать изображение</button>
     </form>   
     </div>
